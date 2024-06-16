@@ -24,7 +24,10 @@ nav a {
     font-size: 1.2rem;
     font-weight: 700;
 }
-
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
 header h1 {
     color: steelblue;
     text-align: center;
