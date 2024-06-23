@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) {
+    .navigation {
+        display: flex;
+    }
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+    .navigation a {
+        text-align: center;
+    }
+    #menu {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

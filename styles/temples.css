@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+    display: flex;
+
+}
+
+nav {
+    background-color: #4B0082;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: black;
+    background-color: white;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+    margin-right: 18px;
+}
+
+figure {
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0.5rem;
+}
+
+figcaption {
+    font-size: smaller;
+}
+
+.hover:hover {
+    box-shadow: 0 0 50px #333;
+}
