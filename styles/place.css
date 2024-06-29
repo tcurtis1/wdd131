@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 :root {
-   
     --background-color: #232c43;
     --box-background-color: rgba(255, 255, 255, 0.8);
     --font-color1: black;
     --font-color2: #fff;
+    --hover-border-color: #ff9900; /* Add a color for the border on hover */
 }
 
 body {
@@ -38,7 +38,6 @@ header h1 {
 main {
     width: 100%;
     max-width: 1200px;
-    /* min-width: 700px; */
     background-color: var(--font-color2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -46,7 +45,6 @@ main {
 
 .image-section {
     position: relative;
-   
 }
 
 .hero-image {
@@ -67,6 +65,7 @@ main {
     border-radius: 8px;
     width: 350px;
     top: 20px;
+    transition: all 0.3s ease;
 }
 
 .data-box {
@@ -75,6 +74,19 @@ main {
 
 .weather-box {
     right: 20px;
+}
+
+.data-box:hover::after, .weather-box:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--hover-border-color);
+    border-radius: 8px;
+    pointer-events: none; /* Prevent the pseudo-element from blocking mouse events */
+    box-sizing: border-box; /* Include border in the element's total width and height */
 }
 
 .data-box h2, .weather-box h2 {
@@ -88,7 +100,6 @@ main {
     margin: 0;
 }
 
-
 .data-box li, .weather-details p {
     margin: 0.5rem 0;
     display: flex;
@@ -96,7 +107,7 @@ main {
 }
 
 .label {
-    min-width: 150px; 
+    min-width: 150px;
     text-align: right;
     padding-right: 20px;
     display: inline-block;
@@ -124,12 +135,8 @@ main {
         position: static;
         margin: 1rem auto;
         width: 80%;
-        /* left: 20px */
-        
     }
 
-    
-    
     .weather-info, .data-info {
         flex-direction: column;
         text-align: center;
@@ -139,7 +146,6 @@ main {
         margin-bottom: 1rem;
         margin-right: 0;
     }
-
 
     .hero-image img {
         width: 100%;
@@ -157,7 +163,7 @@ main {
     }
 
     .label {
-        min-width: 100px; 
+        min-width: 100px;
     }
 }
 
