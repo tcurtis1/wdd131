@@ -1,5 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+   
+    --background-color: #232c43;
+    --box-background-color: rgba(255, 255, 255, 0.8);
+    --font-color1: black;
+    --font-color2: #fff;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -11,8 +24,8 @@ body {
 }
 
 header, footer {
-    background-color: #232c43;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--font-color2);
     width: 100%;
     text-align: center;
     padding: 1rem 0;
@@ -26,7 +39,7 @@ main {
     width: 100%;
     max-width: 1200px;
     /* min-width: 700px; */
-    background-color: #fff;
+    background-color: var(--font-color2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -49,7 +62,7 @@ main {
 
 .data-box, .weather-box {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--box-background-color);
     padding: 1rem;
     border-radius: 8px;
     width: 350px;
