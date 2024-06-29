@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +17,9 @@
         <section class="image-section">
             <div class="hero-image">
                 <picture>
-                    <source srcset="images/sancarlos-wide-v2.webp" media="(min-width: 1000px)">
-                    <source srcset="images/sancarlos-small-v2.webp" media="(min-width: 500px)">
-                    <img src="images/sancarlos-wide-v2.webp" alt="San Carlos Argentina">
-                  </picture>
+                    <source srcset="images/sancarlos-small-v2.webp" media="(max-width: 600px)">
+                    <img src="images/sancarlos-wide-v2.webp" alt="San Carlos Argentina" class="responsive-img">
+                </picture>
             </div>
             <div class="data-box">
                 <h2>Data</h2>
@@ -37,13 +31,12 @@
                     <li>Currency: Argentine Peso</li>
                     <li>Time Zone: UTC-3</li>
                     <li>Calling Code: +54</li>
-                    <li>Internet TLD: .ar</li>
                 </ul>
             </div>
             <div class="weather-box">
                 <h2>Weather</h2>
                 <div class="weather-info">
-                    <div class="weather-icon" id="weather-icon"></div>
+                    <img src="images/weather-icon.webp" alt="Weather Icon" class="weather-icon">
                     <div class="weather-details">
                         <p>Temperature: <span id="temperature">--</span></p>
                         <p>Conditions: <span id="conditions">--</span></p>
@@ -58,6 +51,5 @@
         <p>&copy; 2024 Tony Curtis</p>
         <p>Last Modification: <span id="last-modification"></span></p>
     </footer>
-    
 </body>
 </html>
