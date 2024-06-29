@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Basic HTML layout">
+    <meta name="description" content="Information and weather for Patagonia">
     <meta name="author" content="Tony Curtis">
     <title>Weather in Patagonia</title>
     <link rel="stylesheet" href="styles/place.css">
@@ -23,20 +23,22 @@
             </div>
             <div class="data-box">
                 <h2>Data</h2>
-                <ul>
-                    <li><span class="label">Area:</span> <span>23,750 sq km</span></li>
-                    <li><span class="label">Population:</span> <span>135,704</span></li>
-                    <li><span class="label">Capital:</span> <span>San Carlos de Bariloche</span></li>
-                    <li><span class="label">Languages:</span> <span>Spanish</span></li>
-                    <li><span class="label">Currency:</span> <span>Argentine Peso</span></li>
-                    <li><span class="label">Time Zone:</span> <span>UTC-3</span></li>
-                    <li><span class="label">Calling Code:</span> <span>+54</span></li>
-                </ul>
+                <div class="data-info">
+                    <ul>
+                        <li><span class="label">Area:</span> <span>23,750 sq km</span></li>
+                        <li><span class="label">Population:</span> <span>135,704</span></li>
+                        <li><span class="label">Capital:</span> <span>San Carlos de Bariloche</span></li>
+                        <li><span class="label">Languages:</span> <span>Spanish</span></li>
+                        <li><span class="label">Currency:</span> <span>Argentine Peso</span></li>
+                        <li><span class="label">Time Zone:</span> <span>UTC-3</span></li>
+                        <li><span class="label">Calling Code:</span> <span>+54</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="weather-box">
                 <h2>Weather</h2>
                 <div class="weather-info">
-                    <img src="images/weather-icon.webp" alt="Weather Icon" class="weather-icon">
+                    <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
                     <div class="weather-details">
                         <p><span class="label">Temperature:</span> <span id="temperature">--</span></p>
                         <p><span class="label">Conditions:</span> <span id="conditions">--</span></p>
