@@ -1,0 +1,63 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic HTML layout">
+    <meta name="author" content="Tony Curtis">
+    <title>Weather in Patagonia</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>San Carlos de Bariloche</h1>
+    </header>
+    <main>
+        <section class="image-section">
+            <div class="hero-image">
+                <picture>
+                    <source srcset="images/sancarlos-wide-v2.webp" media="(min-width: 1000px)">
+                    <source srcset="images/sancarlos-small-v2.webp" media="(min-width: 500px)">
+                    <img src="images/sancarlos-wide-v2.webp" alt="San Carlos Argentina">
+                  </picture>
+            </div>
+            <div class="data-box">
+                <h2>Data</h2>
+                <ul>
+                    <li>Area: 23,750 sq km</li>
+                    <li>Population: 135,704</li>
+                    <li>Capital: San Carlos de Bariloche</li>
+                    <li>Languages: Spanish</li>
+                    <li>Currency: Argentine Peso</li>
+                    <li>Time Zone: UTC-3</li>
+                    <li>Calling Code: +54</li>
+                    <li>Internet TLD: .ar</li>
+                </ul>
+            </div>
+            <div class="weather-box">
+                <h2>Weather</h2>
+                <div class="weather-info">
+                    <div class="weather-icon" id="weather-icon"></div>
+                    <div class="weather-details">
+                        <p>Temperature: <span id="temperature">--</span></p>
+                        <p>Conditions: <span id="conditions">--</span></p>
+                        <p>Wind: <span id="wind-speed">--</span> km/h</p>
+                        <p>Wind Chill: <span id="wind-chill">--</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tony Curtis</p>
+        <p>Last Modification: <span id="last-modification"></span></p>
+    </footer>
+    
+</body>
+</html>
