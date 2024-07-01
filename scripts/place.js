@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Simulated weather data
+    // static weather data
     const weatherData = {
-        temperature: -12, // in Celsius
-        windSpeed: 5, // in km/h
+        temperature: -12, // in Celsius because it's s.america
+        windSpeed: 5, // in km/h to match country
         conditions: "Partly Cloudy"
     };
 
-    // Calculate wind chill
+    // Calculate wind chill - hope i got this righto
     function calculateWindChill(temp, windSpeed) {
         if (temp === null || windSpeed === null) {
             return "n/a";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return windChill.toFixed(2) + " °C";
     }
 
-    // Update the weather information on the page
+   
     const temperatureElement = document.getElementById('temperature');
     const windSpeedElement = document.getElementById('wind-speed');
     const windChillElement = document.getElementById('wind-chill');
@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
     windSpeedElement.textContent = weatherData.windSpeed !== null ? weatherData.windSpeed + " km/h" : "n/a";
     windChillElement.textContent = calculateWindChill(weatherData.temperature, weatherData.windSpeed);
 
-    // Update the conditions
+    // Update the conditions from weatherData array above
     document.getElementById('conditions').textContent = weatherData.conditions;
 
-    // Update the last modification date
+    // Update the last modification date - using this instead of existing js
     const lastModified = new Date(document.lastModified);
     document.getElementById('last-modification').textContent = lastModified.toLocaleString();
 });
