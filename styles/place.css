@@ -8,7 +8,7 @@
     --box-background-color: rgba(255, 255, 255, 0.8);
     --font-color1: black;
     --font-color2: #fff;
-    --hover-border-color: #ff9900; /* Add a color for the border on hover */
+    --hover-border-color: #ff9900;
 }
 
 body {
@@ -85,8 +85,8 @@ main {
     height: 100%;
     border: 2px solid var(--hover-border-color);
     border-radius: 8px;
-    pointer-events: none; /* Prevent the pseudo-element from blocking mouse events */
-    box-sizing: border-box; /* Include border in the element's total width and height */
+    pointer-events: none; 
+    box-sizing: border-box;
 }
 
 .data-box h2, .weather-box h2 {
