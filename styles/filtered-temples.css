@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: relative; /* Changed from fixed to relative */
+    position: relative; 
 }
 
 header h1 {
