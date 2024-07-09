@@ -6,7 +6,8 @@
     <meta name="description" content="Information and weather for Patagonia">
     <meta name="author" content="Tony Curtis">
     <title>Weather in Patagonia</title>
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles/place.css"></noscript>
     <script src="scripts/place.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +51,6 @@
                     </div>
                 </div>
             </div>
-            
         </section>
     </main>
     <footer>
