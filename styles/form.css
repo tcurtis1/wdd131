@@ -147,7 +147,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #3b0058;
 }
-
+input:required,
+select:required,
+textarea:required,
+.radio {
+    border-right: 4px solid red;
+}
 footer {
     text-align: center;
     border-top: 1px solid black;
