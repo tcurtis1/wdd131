@@ -66,3 +66,26 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+.project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-tiles figure {
+    flex: 1 1 calc(50% - 10px);
+    margin: 5px;
+    text-align: center;
+}
+
+.project-tiles img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 1.2em;
+}
