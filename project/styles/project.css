@@ -171,7 +171,9 @@ figcaption {
 .form-body textarea,
 .form-body input[type="submit"] {
     margin-bottom: 15px;
+    font-size: larger;
 }
+
 
 .form-body input,
 .form-body textarea {
