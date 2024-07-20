@@ -1,48 +1,97 @@
 :root {
     --primary-color: #1E3A8A;
-    --secondary-color: #3B82F6;
+    --secondary-color: #2e6dd1;
     --background-color: #F3F4F6;
     --text-color: #111827;
+    --form-background-color: #E0E0E0;
     --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 header {
     background-color: var(--primary-color);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
 }
 
-nav ul {
-    list-style-type: none;
+header h1 {
+    margin: 0;
+}
+
+#menu {
+    display: none;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+.navigation {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    display: inline;
+.navigation li {
+    display: block;
 }
 
-nav ul li a {
-    color: white;
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
     text-decoration: none;
-    padding: 15px 20px;
-    display: inline-block;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-nav ul li a:hover {
-    background-color: var(--secondary-color);
+.navigation a:hover,
+.navigation a:active {
+    color: black;
+    background-color: white;
+}
+
+.show {
+    display: flex;
+}
+
+.show li {
+    display: block;
+    text-align: center;
+}
+
+#menu.show::before {
+    content: "X";
 }
 
 main {
@@ -50,42 +99,226 @@ main {
     width: 90%;
     max-width: 1200px;
 }
-
-.color-box {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    margin-right: 10px;
-    border: 1px solid #000;
+/* Trips page */
+.container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+}
+.container-photo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
+figure {
+    background-color: #fff;
+}
+figure img {
+    height: 220px;
+    width: auto;
+}
+figcaption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.photo-album img {
+    display: flex;
+    width: 250px;
+    height: auto;
+}
+
+.hover:hover {
+    box-shadow: 0 0 50px #333;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--form-background-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--form-background-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-body label,
+.form-body input,
+.form-body textarea,
+.form-body input[type="submit"] {
+    margin-bottom: 15px;
+}
+
+.form-body input,
+.form-body textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.stdlf {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 footer {
     background-color: var(--primary-color);
     color: white;
     width: 100%;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
 }
 
-.project-tiles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project-tiles figure {
-    flex: 1 1 calc(50% - 10px);
-    margin: 5px;
-    text-align: center;
-}
-
-.project-tiles img {
+/* Table beautificaiton    */
+#search {
     width: 100%;
-    height: auto;
-    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    max-width: 908px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    font-size: 1.1rem;
+    max-width: 908px;
 }
 
-figcaption {
-    margin-top: 5px;
+th {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+
+#visitor-count {
+    margin-top: 10px;
     font-size: 1.2em;
+}
+/* Links page css */
+.links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.links-list li {
+    margin-bottom: 20px;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.links-list a:hover {
+    color: var(--secondary-color);
+}
+
+.links-list a:visited {
+    color: var(--text-color);
+    background-color: var(--form-background-color);
+}
+
+
+
+
+/* General styles for mobile and small screens */
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+    }
+
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--primary-color);
+        display: none;
+    }
+
+    .show {
+        display: flex;
+    }
+
+    .show li {
+        display: block;
+        text-align: center;
+    }
+
+    .navigation a {
+        border-top: 1px solid white;
+        padding: 1rem;
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .navigation li {
+        display: block;
+    }
+
+    .navigation a {
+        border: none;
+        padding: 0.75rem 1rem;
+    }
 }

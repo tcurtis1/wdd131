@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Website for Tony Curtis">
+    <meta name="author" content="Tony Curtis">
+    <title>Tony Curtis WDD 131 | Personal Projects Hub</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="links.html">Favorite Links</a></li>
+                <li><a href="trips.html">Favorite Trips</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about-me">
+            <div class="about-container">
+                <img src="images/mypic.jpeg" alt="My Photo" class="profile-picture" loading="lazy">
+                <p class="about-text">Hello! I'm Tony Curtis, a passionate developer working on various innovative projects. I love sharing my journey and experiences through my projects and travel adventures. Feel free to explore my website and learn more about what I do.</p>
+            </div>
+        </section>
+        <section id="contact-form">
+            <h2>Send Me a Message</h2>
+            <form id="message-form" class="form-body">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="location">Where are you from</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Send Tony a Message">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tony Curtis</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+        <p id="visitor-count"></p>
+    </footer>
+</body>
+</html>
